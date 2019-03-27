@@ -369,4 +369,4 @@ const avAge = avgAge (people); //Note: average in return and const SHOULD NOT ha
 console.log("Average is", avAge);
 
 assertEquals(ttlAge, 100);
-assertEquals(avAge, 20);
+assertEquals(avAge, 30);
