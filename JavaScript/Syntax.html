@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<script>
+//define attributes / variables
+var number = 3;		//JavaScript has only one type of numbers 			
+var fisrtName = "Henry" //String is a text inside either double or single quotes
+var x = 2;
+var y = 56;
+console.log(x == y) // Booleans can only have eiher true or false values
+
+var colours = ["Purple", "Yellow", "Green"]; // array is a list of names inside brackets and separated with commas
+var person = {fisrtName:"Jonathan", lastName:"Nixon"}; //dictionary / objects have property and a value	
+//Object properties are written as name:value pairs, separated by commas inside curly braces
+var lastName; // undefined. In JavaScript, a variable without a value, has the value undefined. The type is also undefined.	
+//sample if / else
+function processLargest(a, b){
+	if (a>b){
+		console.log("The first number is larger");
+		return a;
+	} else {
+		console.log("The second one is larger");
+		return b;
+	}
+}
+console.log (processLargest(20, 5));
+var resolveNumber = processLargest(3, 7); //Here we are storing the function into the var
+console.log(resolveNumber + 100); //In console we will see both "The first number is larger" & "The second one is larger" because once I have (20,5) & (3,7)
+
+
+//functions. A JavaScript function is a block of code designed to perform a particular task.
+function myFunction(parameter1, parameter2){ }//parameters. Function parameters are listed inside the parentheses () in the function definition.
+											//Function arguments are the values received by the function when it is invoked.
+// returns: When JavaScript reaches a return statement, the function will stop executing.
+//arrays 
+var colours = ["Purple", "Yellow", "Green"];
+colours.push("Magenta");
+console.log(colours); //add to the end
+
+colours.shift("Cyann");
+console.log(colours); //add to the front
+
+colours[1] = "Pink";
+console.log(colours); //update values
+//loops 
+//for:
+for (let i=0; i<7; i++) {
+	console.log(i);
+} 
+//for/in:
+for (Order in colours){
+	console.log("Order", Order);
+	console.log(colours[Order], "is clours #", Order);
+} 
+//while:
+var countDown = 7;
+while (countDown > 0) {
+	console.log("while", countDown);
+	countDown--;
+}
+
+//do while:
+var example = 8
+do {
+	console.log("do while", example);
+	example--;
+} while (2 < example && example < 8);
+
+//forEach (with array and function): // Executes a provided function once for each element
+// let colours = [
+// 	"Purple", 
+// 	"Yellow", 
+// 	"Green",
+// ];
+colours.forEach(function (x, i){ //console.log should match the function so it can print our function, Otherwise, it will print out our variable
+	console.log(x, i)
+});
+
+//Objects / Dictionaries
+//declare object
+//lookup key to retrieve value
+console.log(Object.values(person)); //Thsi will show the values in my object into arrays
+console.log(Object.keys(person)); // This will show the keys/properties in my object into arrays
+
+</script>
+</html>
