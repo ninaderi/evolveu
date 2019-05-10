@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import ReactDOM from "react-dom";
 import logo from './logo.svg';
 import './App.css';
+import AccountsApp from "./Components/AccountsApp"
 //import Icons from './Components/Icons';
 import icon1 from "./Components/cheers.svg";
 import icon2 from "./Components/crown.svg";
@@ -49,7 +51,7 @@ class App extends Component {
               (e.target.id === "calc-icon") {
               this.setState ({
                 event: 'You click on calculator icon!', 
-                onShow: null    
+                onShow: <AccountsApp />   
             })
           }
         }
@@ -76,10 +78,7 @@ class App extends Component {
             <h1>{this.state.event}</h1>
 
         
-        <div>
-          <img src={logo} className="App-logo" alt="logo" />
-        </div>
-
+        
       
             <div>
             
@@ -89,6 +88,9 @@ class App extends Component {
               <img onClick={this.onIconClick} src={icon4} className="glasses-logo" id="calc-icon"  alt=" "></img>
             </div>
 
+        <div>
+          <img src={logo} className="App-logo" alt="logo" />
+        </div>
 
          
          

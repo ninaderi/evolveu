@@ -1,13 +1,15 @@
-import acc from "./Account.js";
+import Account from "./Account.js";
 
 test("Balance in account", () => {
 	console.log("testing the initial balance");
-	const first = new acc.Account (0, "CheckingAccount"); //without acc.Account you will get an error
+	const first = new Account (1, 0, "CheckingAccount"); //without acc.Account you will get an error
 
-	expect (first.initialBlc).toBe(0);
+	expect (first.balance).toBe(0);
 	expect (first.accname).toBe("CheckingAccount");
 
-	expect(first.check()).toBe(0);
-	expect(first.deposit(10)).toBe(10);
-	expect(first.withdraw(20)).toBe(-10);
+	let x = first.deposit(30);
+	expect (first.balance).toBe(30);
+	expect(first.check()).toBe(30);
+	expect(first.deposit(15)).toBe(45);
+	expect(first.withdraw(5)).toBe(40);
 });

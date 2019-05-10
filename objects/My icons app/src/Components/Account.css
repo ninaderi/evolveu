@@ -1,0 +1,14 @@
+.boxAccountChild {
+	border: 2px solid white;
+	width: 300px;
+	margin: 30px;
+}
+
+.btn {
+	border: 2px solid black;
+}
+
+.boxAccountParent {
+	border: 2px solid white;
+	margin: auto;
+}
