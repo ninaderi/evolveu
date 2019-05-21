@@ -12,10 +12,10 @@ class Accounts {
 	}
 
 	 addAccount(balance, nameAcc) {
-		 let addNewAcc = new Account (this.counter,balance, nameAcc);//here you HAVE TO type "Accounts" after "new" otherwise your test won't work. Accounts is your main class
+		 let addNewAcc = new Account (this.counter, balance, nameAcc);//here you HAVE TO type "Accounts" after "new" otherwise your test won't work. Accounts is your main class
 		 this.newArray.push(addNewAcc);
 		 this.counter++;
-		 //console.log("This is an array");
+		 console.log("This is an array");
 	 }
 
 	 removeAccount(id) {

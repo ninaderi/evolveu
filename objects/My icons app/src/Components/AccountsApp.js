@@ -89,10 +89,11 @@ class AccountsApp extends Component {
 		
 		return (
 			<div className= "boxAccountParent">
-				<p>It is my parent</p> 
-				<input onChange={this.onHandleChange} name="accountName" id='accountName'type='text' placeholder='Enter Account Name'></input>
-				<input onChange={this.onHandleChange} name="accountBalance" id='accountBalance'type='number' placeholder='Enter Account Balance'></input>
-				<button onClick={this.addNewAccount} id="adding" className = "btn"> Add </button> 
+				<div>
+					<input onChange={this.onHandleChange} className="sizeControl" name="accountName" id='accountName'type='text' placeholder='Enter Account Name'></input>
+					<input onChange={this.onHandleChange} className="sizeControl" name="accountBalance" id='accountBalance'type='number' placeholder='Enter Account Balance'></input>
+					<button onClick={this.addNewAccount} id="adding" className = "btn"> Add </button> 
+				</div>
 				<br></br>
 				{renderList}
 				

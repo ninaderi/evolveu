@@ -2,13 +2,31 @@
 	border: 2px solid white;
 	width: 300px;
 	margin: 30px;
+
 }
 
 .btn {
-	border: 2px solid black;
+	border: 0.5px solid black;
+	margin: 5px;
+	height: 20px;
+	width: 100px;
 }
 
 .boxAccountParent {
 	border: 2px solid white;
 	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	float: left;
+}
+
+.btn:hover {
+	background-color: #b1a0d3;
+}
+
+.sizeControl {
+	border: 0.5px solid black;
+	margin: 5px;
+	height: 20px;
+	width: 200px;
 }

@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import logo from './logo.svg';
 import './App.css';
 import AccountsApp from "./Components/AccountsApp"
+import CommunityApp from "./Components/CommunityApp"
+import LinkedListApp from "./Components/LinkedListApp"
+
 //import Icons from './Components/Icons';
 import icon1 from "./Components/cheers.svg";
 import icon2 from "./Components/crown.svg";
@@ -11,7 +14,7 @@ import icon4 from "./Components/calculator.svg";
 import MathComp from "./Components/MathComp";
 
 
-import Account from "./Components/Account";
+// import Account from "./Components/Account";
 
 class App extends Component {
     constructor () {
@@ -30,21 +33,21 @@ class App extends Component {
             if(e.target.id === "cheers-icon") {
               this.setState ({
                 event: 'You click on cheers icon!', 
-                onShow: <MathComp />,   
+                onShow: <CommunityApp/> 
           })
           } else if
             //console.log(e);
               (e.target.id === "crown-icon") {
               this.setState ({
                 event: 'You click on crown icon!', 
-                onShow: null   
+                onShow: <MathComp />,  
             })
           } else if
             //console.log(e);
               (e.target.id === "music-icon") {
               this.setState ({
                 event: 'You click on music icon!', 
-                onShow: null 
+                onShow: <LinkedListApp /> 
             })
           } else if
             //console.log(e);

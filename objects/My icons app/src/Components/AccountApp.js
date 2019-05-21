@@ -1,6 +1,6 @@
 import React, { Component } from "react"
-import ReactDOM from "react-dom"
-import Account from "./Account"
+// import ReactDOM from "react-dom"
+// import Account from "./Account"
 import "./Account.css"
 
 class AccountApp extends Component {
@@ -48,14 +48,15 @@ class AccountApp extends Component {
 				<p>Account Name {this.props.accountObject.accname}</p>
 				<p>Account Balance {this.props.accountObject.balance}</p>
 				
-				<button onClick={this.deleteAccount}> Delete </button>
-				<button onClick={this.depositAccount}> Deposit </button>
-				<button onClick={this.withdrawAccount}> Withdraw </button>
 				
-				
+
+				<button onClick={this.depositAccount} className = "btn"> Deposit </button>
 				<input onChange={this.onChange} id='depositing' type='number' placeholder='Enter the amount here'></input>
+				<br></br>
+				<button onClick={this.withdrawAccount} className = "btn"> Withdraw </button>
 				<input onChange={this.onChange} id='withdrawing' type='number' placeholder='Enter the amount here'></input>
-				
+				<br></br>
+				<button onClick={this.deleteAccount} className = "btn"> Delete </button>
 			</div>
 			)
 		}
