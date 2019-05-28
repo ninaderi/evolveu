@@ -46,7 +46,7 @@ class LinkedListComp extends React.Component {
            <div id='insert' className='insert'>
                <input onChange={this.onChange} id='subject'type='text' placeholder='Enter Subject'></input>
                <input onChange={this.onChange} id='amount' type='number' placeholder='Enter Amount'></input>
-               <button onClick={this.onInserting}>Submit</button>
+               <button className = "btnList" onClick={this.onInserting}>Submit</button>
            </div>
         )
     }
@@ -125,19 +125,20 @@ class LinkedListComp extends React.Component {
                    {this.state.view === 'add' && this.onInsertingShow()}
                </div>
                <div className='lista'>
-                   <button id='inputBtn' onClick={this.onStateChange}>Insert</button>
-                   <button id='inputBtn'onClick={this.onDelete}>Delete</button>
+                   <button id='inputBtn' className = "btnList" onClick={this.onStateChange}>Insert</button>
+                   <button id='inputBtn' className = "btnList" onClick={this.onDelete}>Delete</button>
                    <br/>
-                   <button id='inputBtn' onClick={this.onFirstPosition}>First</button>
-                   <button id='inputBtn' onClick={this.onLastPosition}>Last</button>
-                   <button id='inputBtn'onClick={this.nextInPosition}>Next</button>
-                   <button id='inputBtn'onClick={this.onPreviousPosition}>Previous</button>
+                   <button id='inputBtn' className = "btnList" onClick={this.onFirstPosition}>First</button>
+                   <button id='inputBtn' className = "btnList" onClick={this.onLastPosition}>Last</button>
+                   <button id='inputBtn' className = "btnList" onClick={this.nextInPosition}>Next</button>
+                   <button id='inputBtn' className = "btnList" onClick={this.onPreviousPosition}>Previous</button>
                    <br/>
-                   <button id='inputBtn' onClick={this.onTotal}>Total Amount</button>
-                   <input value= {this.state.result}></input>
-                   <p>Subject: {this.state.list.current.subject}</p>
-                   <p>Amount: {this.state.list.current.amount.toLocaleString()}</p>
-            
+                   <button id='inputBtn' className = "btnList" onClick={this.onTotal}>Total Amount</button>
+                   <input className="sizeControlList" value= {this.state.result} ></input>
+                   <div className = "subj-amnt">
+                     <p>Subject: {this.state.list.current.subject}</p>
+                     <p>Amount: {this.state.list.current.amount.toLocaleString()}</p>
+                  </div>
                 
                          
                </div>

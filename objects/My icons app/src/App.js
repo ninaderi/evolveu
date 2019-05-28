@@ -5,13 +5,16 @@ import './App.css';
 import AccountsApp from "./Components/AccountsApp"
 import CommunityApp from "./Components/CommunityApp"
 import LinkedListApp from "./Components/LinkedListApp"
+import MathComp from "./Components/MathComp";
+import FifoLifoApp from "./Components/FifoLifoApp";
 
 //import Icons from './Components/Icons';
 import icon1 from "./Components/cheers.svg";
-import icon2 from "./Components/crown.svg";
-import icon3 from "./Components/icons8-music.svg";
-import icon4 from "./Components/calculator.svg";
-import MathComp from "./Components/MathComp";
+import icon2 from "./Components/calculator.png";
+import icon3 from "./Components/chain.png";
+import icon4 from "./Components/accounts.svg";
+import icon5 from "./Components/Fifo.png";
+import icon6 from "./Components/home.png";
 
 
 // import Account from "./Components/Account";
@@ -32,32 +35,44 @@ class App extends Component {
             console.log("Here3");
             if(e.target.id === "cheers-icon") {
               this.setState ({
-                event: 'You click on cheers icon!', 
+                event: 'Community/City!', 
                 onShow: <CommunityApp/> 
           })
           } else if
             //console.log(e);
               (e.target.id === "crown-icon") {
               this.setState ({
-                event: 'You click on crown icon!', 
+                event: 'Calculator!', 
                 onShow: <MathComp />,  
             })
           } else if
             //console.log(e);
               (e.target.id === "music-icon") {
               this.setState ({
-                event: 'You click on music icon!', 
+                event: 'LinkedList!', 
                 onShow: <LinkedListApp /> 
             })
           } else if
             //console.log(e);
               (e.target.id === "calc-icon") {
               this.setState ({
-                event: 'You click on calculator icon!', 
+                event: 'Accounts!', 
                 onShow: <AccountsApp />   
             })
-          }
+          } else if 
+              (e.target.id === "fifo-icon") {
+                  this.setState ({
+                    event: 'FifoLifo!', 
+                    onShow: <FifoLifoApp />   
+                })
+          } else if
+            (e.target.id === "home-icon") {
+                  this.setState ({
+                    event: 'Home!', 
+                    onShow: null   
+                })
         }
+      }
 
   // }
   // render() {
@@ -89,6 +104,8 @@ class App extends Component {
               <img onClick={this.onIconClick} src={icon2} className="king-logo" id="crown-icon"  alt=" "></img>
               <img onClick={this.onIconClick} src={icon3} className="music-logo" id="music-icon"  alt=" "></img>
               <img onClick={this.onIconClick} src={icon4} className="glasses-logo" id="calc-icon"  alt=" "></img>
+              <img onClick={this.onIconClick} src={icon5} className="inventory-logo" id="fifo-icon"  alt=" "></img>
+              <img onClick={this.onIconClick} src={icon6} className="home-logo" id="home-icon"  alt=" "></img>
             </div>
 
         <div>

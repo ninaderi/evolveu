@@ -41,6 +41,16 @@ body {
   
 }
 
+.inventory-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 10vmin;
+}
+
+.home-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 10vmin;
+}
+
 
 .App-link {
   color: #61dafb;

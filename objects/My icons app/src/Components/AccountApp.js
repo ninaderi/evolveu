@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 // import ReactDOM from "react-dom"
 // import Account from "./Account"
-import "./Account.css"
+import "./General.css"
 
 class AccountApp extends Component {
 	constructor(props) {
@@ -45,10 +45,13 @@ class AccountApp extends Component {
 	render (props) {
 		return (
 			<div className = "boxAccountChild"> 
+			<form>
+				<fieldset>
+					<legend className = "border">Account</legend>
 				<p>Account Name {this.props.accountObject.accname}</p>
 				<p>Account Balance {this.props.accountObject.balance}</p>
-				
-				
+				</fieldset>
+			</form>	
 
 				<button onClick={this.depositAccount} className = "btn"> Deposit </button>
 				<input onChange={this.onChange} id='depositing' type='number' placeholder='Enter the amount here'></input>

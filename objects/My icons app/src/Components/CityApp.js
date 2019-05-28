@@ -44,22 +44,22 @@ class CityApp extends Component {
 	render (props) {
 		return (
 				<div className='classDiv1'>
-			<div className='citycard'>
-				<p id='info'>Name: {this.props.cityObject.name}</p>
-				<p id='info'>Type: {this.props.cityObject.howBig()}  </p>
-				<p id='info'>Population: {this.props.cityObject.pop}</p>
-				<p id='info'>Latitude:{this.props.cityObject.lat}</p>
-				<p id='info'>Longitude: {this.props.cityObject.long}</p>
-				<p id='info'>Hempishere: {this.props.cityObject.whichSphere()}</p>
-				<input type='text' value={this.state.inputUpdate} placeholder='Enter Numbers' onChange={this.onChange}></input>
-				<br />
-				
-				<br />
-				<button id='btns' onClick={this.moveIn}>MovedIn</button>
-				<button id='btns' onClick={this.moveOut}>MovedOut</button>
-				<button id='btns'onClick={this.showingInfo}>Show Info</button>
-				<button id='btns' onClick={this.deletingCity}>Delete</button>
-			</div>
+					<div className='citycard'>
+						<p id='info'>Name: {this.props.cityObject.name}</p>
+						<p id='info'>Type: {this.props.cityObject.howBig()}  </p>
+						<p id='info'>Population: {this.props.cityObject.pop}</p>
+						<p id='info'>Latitude:{this.props.cityObject.lat}</p>
+						<p id='info'>Longitude: {this.props.cityObject.long}</p>
+						<p id='info'>Hempishere: {this.props.cityObject.whichSphere()}</p>
+						<input type='text' value={this.state.inputUpdate} placeholder='Enter Numbers' onChange={this.onChange}></input>
+						<br />
+						
+						<br />
+						<button id='btns' className="btnCity" onClick={this.moveIn}>MovedIn</button>
+						<button id='btns' className="btnCity" onClick={this.moveOut}>MovedOut</button>
+						<button id='btns' className="btnCity" onClick={this.showingInfo}>Show Info</button>
+						<button id='btns' className="btnCity" onClick={this.deletingCity}>Delete</button>
+					</div>
 				</div>
 			)
 	}

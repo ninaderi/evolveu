@@ -1,0 +1,132 @@
+/***** CSS for Mathcomp ****/
+
+.btnCalc {
+	border: 0.5px solid black;
+	margin: 5px;
+	height: 20px;
+	width: 50px;
+}
+
+/**** CSS for AccountsApp ****/
+
+.boxAccountChild {
+	border: 2px solid white;
+	width: 300px;
+	margin: 30px;
+
+}
+
+.btn {
+	border: 0.5px solid black;
+	margin: 5px;
+	height: 20px;
+	width: 100px;
+}
+
+
+.boxAccountParent {
+	border: 2px solid white;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	float: left;
+}
+
+.btn:hover {
+	background-color: #b1a0d3;
+}
+
+.sizeControl {
+	border: 0.5px solid black;
+	margin: 5px;
+	height: 20px;
+	width: 200px;
+}
+
+/**** CSS for FifoLifoApp ****/
+
+.btnFiFo {
+	border: 0.5px solid black;
+	margin: 5px;
+	height: 18px;
+	width: 100px;
+}
+
+/**** CSS for CityApp ****/
+.classDiv1 {
+	border: 1px solid white;
+	padding: 20px;
+	margin: 10px;
+}
+
+.btnCity {
+	border: 0.5px solid black;
+	margin: 5px;
+	height: 18px;
+	width: 100px;
+}
+
+.btnCity:hover {
+	background-color: #b1a0d3;
+}
+
+/**** CSS for CommunityApp ****/
+.sizeControlCommunity {
+	border: 0.5px solid black;
+	margin: 5px;
+	height: 22px;
+	width: 100px;
+}
+
+.commDiv {
+	border: 2px solid white;
+	padding: 30px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	float: left;
+}
+
+p {
+	margin: 0;
+	line-height: 35px;
+}
+
+/**** CSS for List ****/
+.btnList {
+	border: 0.5px solid black;
+	margin: 5px;
+	height: 18px;
+	width: 100px;
+}
+
+.btnList:hover {
+	background-color: #b1a0d3;
+}
+
+.sizeControlList {
+	border: 0.5px solid black;
+	margin: 5px;
+	height: 15px;
+	width: 100px;
+}
+
+.subj-amnt {
+	border: 2px solid white;
+	margin-left: 40%;
+	margin-right: 40%;
+	padding: 2px;
+}
+
+
+/**** CSS for LifoFifoyApp ****/
+.FifoList {
+	list-style-type: none;
+}
+
+ol li {
+	background-color: #b1a0d3;
+	padding: 2px;
+	margin-left: 35%;
+	width: 60px;
+}

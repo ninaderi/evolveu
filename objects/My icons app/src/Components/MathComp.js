@@ -55,18 +55,18 @@ class MathComp extends Component {
 
 		<div>
 
-			<div><h1>Hello world from MathComp</h1></div>
-
+			
 				<div>
 					<input id="input1" onClick={this.Calculate}></input>
+					<br></br>
 					<input id="input2" onClick={this.Calculate}></input>
 				</div>
 
 				<div> 
-					<input type="button" id="sum" value="+" onClick={this.sum}></input>
-					<input type="button" id="sub" value="-" onClick={this.sub}></input>
-					<input type="button" id="multi" value="x" onClick={this.multi}></input>
-					<input type="button" id="divi" value="/" onClick={this.divi}></input>
+					<input type="button" id="sum" value="+" onClick={this.sum} className = "btnCalc"></input> 
+					<input type="button" id="sub" value="-" onClick={this.sub} className = "btnCalc"></input> 
+					<input type="button" id="multi" value="x" onClick={this.multi} className = "btnCalc"></input>
+					<input type="button" id="divi" value="/" onClick={this.divi} className = "btnCalc"></input>
 					<p>{this.state.results}</p>
 				</div>
 

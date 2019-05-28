@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import AccountApp from "./AccountApp";
 import Accounts from "./Accounts.js";
-import "./Account.css"
+import "./General.css"
 
 class AccountsApp extends Component {
 	constructor () {
@@ -10,6 +10,10 @@ class AccountsApp extends Component {
 			newAccount:new Accounts(),
 			accountName: null,
 			accountBalance: 0,
+			total: 0,
+			highest: 0,
+			lowest: 0,
+
 		};
 	}
 
@@ -73,6 +77,23 @@ class AccountsApp extends Component {
 			})
 		}
 
+	// totalAccount = () => {
+	// 	let totAcc = this.newAccount.accountTotal();
+	// 	this.setState({total: totAcc});
+	// 	return totAcc;
+	// }
+
+	// gettingHighest = () => {
+	// 	let high = this.newAccount.highestAccount();
+	// 	this.setState({high: high});
+	// 	return high;
+	// }
+
+	// gettingLowest = () => {
+	// 	let low = this.newAccount.lowestAccount();
+	// 	this.setState({low: low});
+	// 	return low;
+	// }
 
 	render () {
 			const obj = this.state.newAccount.newArray
@@ -95,6 +116,18 @@ class AccountsApp extends Component {
 					<button onClick={this.addNewAccount} id="adding" className = "btn"> Add </button> 
 				</div>
 				<br></br>
+				<div>
+					<form>
+						<fieldset>
+							<legend className = "border">Account List</legend>
+						
+							<h6>Account Total : {this.state.newAccount.accountTotal()}</h6>
+							<h6>Account Highest : {this.state.newAccount.highestAccount()}</h6>
+							<h6>Account Lowest : {this.state.newAccount.lowestAccount()}</h6>
+						</fieldset>
+					</form>
+				</div>
+
 				{renderList}
 				
 			</div>

@@ -48,7 +48,7 @@ class CommunityApp extends Component {
 				<input onChange={this.onChange} id='pop' type='number' placeholder='Enter Population'></input>
 				<input onChange={this.onChange} id='lat' type='number' placeholder='Enter Latitude'></input>
 				<input onChange={this.onChange} id='long' type='number' placeholder='Enter Longitude'></input>
-				<button onClick={this.onAddingCity}>Submit</button>
+				<button className="sizeControlCommunity" onClick={this.onAddingCity}>Submit</button>
 			</div>
 
 			)
@@ -103,14 +103,14 @@ class CommunityApp extends Component {
 		let info = arr.showInfo(id);
 		console.log(info);
 		this.setState({
-			output: info,
+			outPutCity: info,
 		})
 	}
 
 	render () {
 		const obj = this.state.nwC.cityArray
-		const renderList = obj.map(item => {
-			return <CityApp key={item.id}
+		const renderList = obj.map((item ,i) => {
+			return <CityApp key={i}
 							cityObject = {item}
 							onDelete = {this.onDeletingCity}
 							onMovingIn = {this.onMovingIn}
@@ -122,21 +122,26 @@ class CommunityApp extends Component {
 		})
 
 		return (
-			<div>
+			<div className = "commDiv">
 				<div>
 					<button id='addbtn' onClick={this.onViewChange}>Add City</button>
 					{this.state.view === "add" && this.onCityInput()}
 				</div>
 				<br></br>
-				{renderList}
+			
 
 				<div className='status'>
-					<p>Show City Info: {this.state.output}</p>
-					<p>Most Northern City: {this.state.nwC.mostNorthern()}</p>
-					<p>Most Southern City: {this.state.nwC.mostSouthern()}</p>
-					<p>Total Population - all Cities: {this.state.nwC.getPop().toLocaleString()}</p>
+					<form>
+						<fieldset>
+							<legend className = "border">City Info</legend>
+							<p>Show City Info: {this.state.outPutCity}</p>
+							<p>Most Northern City: {this.state.nwC.mostNorthern()}</p>
+							<p>Most Southern City: {this.state.nwC.mostSouthern()}</p>
+							<p>Total Population - all Cities: {this.state.nwC.getPop().toLocaleString()}</p>
+						</fieldset>
+					</form>
 				</div>
-
+				{renderList}
 			</div>
 
 			)
