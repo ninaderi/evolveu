@@ -1,0 +1,16 @@
+.picContainer {
+	border: 1px solid black;
+	/*margin: 5px;*/
+	height: 20vh;
+	width: 20vh;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.pixels{
+	border: 1px solid black;
+	width: 6vh;
+	height: 6vh;
+}
