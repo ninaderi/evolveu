@@ -8,7 +8,7 @@ import LinkedListApp from "./Components/LinkedListApp"
 import MathComp from "./Components/MathComp";
 import FifoLifoApp from "./Components/FifoLifoApp";
 
-import PicLogin from "./Components/picLogin";
+// import PicLogin from "./Components/picLogin";
 
 //import Icons from './Components/Icons';
 import icon1 from "./Components/cheers.svg";
@@ -71,7 +71,7 @@ class App extends Component {
             (e.target.id === "home-icon") {
                   this.setState ({
                     event: 'Home!', 
-                    onShow: <PicLogin />   
+                    onShow: null 
                 })
         }
       }
